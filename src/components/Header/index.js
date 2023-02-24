@@ -8,20 +8,37 @@ import {
 } from 'react-native'
 
 import { Feather } from '@expo/vector-icons'
-import { statusBar } from 'expo-status-bar';
+import {MotiView, MotiText} from 'moti'
 
 const statusBarHeight = StatusBar.currentHeight ? StatusBar.currentHeight + 22 : 64;
 
 export default function Header({ name }){
     return(
         <View style={styles.container}>
-            <View style={styles.content}>
+            {/* <MotiView style={styles.content}
+            
+            from={{
+                translateY: -150,
+                opacity:0,
+            }}
+
+            animate={{
+                translateY: 0,
+                opacity:1,
+            }}
+            transition={{
+                tipe: "timing",
+                duration:800,
+                delay: 300,
+            }}        
+            >
+
                 <Text style={styles.username}>{name}</Text>
 
                 <TouchableOpacity activeOpacity={0.9} style={styles.buttonUser}>
                     <Feather name='user' size={27} color='#fff'/>
                 </TouchableOpacity>
-            </View>
+            </MotiView> */}
         </View>
     )  
 }

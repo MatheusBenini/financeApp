@@ -3,11 +3,12 @@ import { StyleSheet, Text, View, FlatList } from 'react-native';
 import Header from '../../components/Header';
 import Balance from '../../components/Balance';
 import Moviments from '../../components/Moviments';
+import Actions from '../../components/Actions';
 
 
 const list= [{
   id:1,
-  label:'Boleto Conta de luz',
+  label:'CPFL',
   value:'300,00',
   date:'17/02/2022',
   type:0 //despesas
@@ -15,7 +16,7 @@ const list= [{
 
 {
   id:2,
-  label:'Boleto Centro Universitario Salesiano',
+  label:'Centro Universitario Salesiano',
   value:'869,00',
   date:'10/02/2022',
   type:0
@@ -26,7 +27,7 @@ const list= [{
   value:'6.000,00',
   date:'18/02/2022',
   type:1 //receita
-}/*,
+},
 {
   id:4,
   label:'Tranferencia Cliente 2',
@@ -36,18 +37,18 @@ const list= [{
 },
 {
   id:5,
-  label:'Boleto Vivo Fibra',
+  label:'Vivo',
   value:'300,00',
   date:'10/02/2022',
   type:0
 },
 {
   id:6,
-  label:'Boleto Sanasa',
+  label:'Sanasa',
   value:'369,00',
   date:'17/02/2022',
   type:0
-}*/
+}
 
 ]
 export default function Home() {
@@ -57,6 +58,8 @@ export default function Home() {
     <Header name="Matheus Benini"/>
 
     <Balance saldo="9.250,90" gastos="-527,00"/>
+
+    <Actions/>
 
     <Text style={styles.title}>Últimas Movimentações</Text>
 
@@ -81,9 +84,8 @@ const styles = StyleSheet.create({
     color:'#dadada',
   fontSize:18,
   fontWeight:'bold',
-  marginRight: 14,
-  marginLeft: 14,
-  marginTop: 30,
+  margin: 14,
+  
   },
 
   list:{
