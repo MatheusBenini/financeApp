@@ -10,12 +10,12 @@ import {
 import { Feather } from '@expo/vector-icons'
 import {MotiView, MotiText} from 'moti'
 
-const statusBarHeight = StatusBar.currentHeight ? StatusBar.currentHeight + 22 : 64;
+const statusBarHeight = StatusBar?.currentHeight ? StatusBar?.currentHeight + 22 : 64;
 
 export default function Header({ name }){
     return(
         <View style={styles.container}>
-            {/* <MotiView style={styles.content}
+            <MotiView style={styles.content}
             
             from={{
                 translateY: -150,
@@ -27,18 +27,35 @@ export default function Header({ name }){
                 opacity:1,
             }}
             transition={{
-                tipe: "timing",
+                type: "spring",
                 duration:800,
                 delay: 300,
             }}        
-            >
+        >
 
-                <Text style={styles.username}>{name}</Text>
+                <MotiText
+                 style={styles.username}
+                 from={{
+                    translateX: -300,
+                    
+                }}
+    
+                animate={{
+                    translateX: 0,
+                    
+                }}
+                transition={{
+                    type: "timing",
+                    duration:800,
+                    delay: 800,
+                }}        >
+                    {name}
+                    </MotiText>
 
                 <TouchableOpacity activeOpacity={0.9} style={styles.buttonUser}>
                     <Feather name='user' size={27} color='#fff'/>
                 </TouchableOpacity>
-            </MotiView> */}
+            </MotiView>
         </View>
     )  
 }
