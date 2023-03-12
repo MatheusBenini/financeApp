@@ -1,4 +1,4 @@
-###FinanceApp  
+### FinanceApp  
 
 É um projeto que desenvolvi enquanto estudo React Native 
 
