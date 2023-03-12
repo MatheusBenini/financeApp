@@ -62,7 +62,7 @@ export default function Header({ name }){
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor:'#8000ff',
+        backgroundColor:'#000000',
         paddingTop: statusBarHeight,
         flexDirection: 'row',
         paddingStart: 16,
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     buttonUser:{
         width:44,
         height:44,
-        backgroundColor:'rgba(255,255,255,0.5)',
+        backgroundColor:'#222222',
         justifyContent:'center',
         alignItems:'center',
         borderRadius: 44/2,

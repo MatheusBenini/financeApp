@@ -24,14 +24,14 @@ const list= [{
 {
   id:3,
   label:'Pix Cliente',
-  value:'6.000,00',
+  value:'7.350,00',
   date:'18/02/2022',
   type:1 //receita
 },
 {
   id:4,
   label:'Tranferencia Cliente 2',
-  value:'1.900,00',
+  value:'10.000,00',
   date:'17/19/2022',
   type:1
 },
@@ -57,7 +57,7 @@ export default function Home() {
 
     <Header name="Matheus Benini"/>
 
-    <Balance saldo="9.250,90" gastos="-527,00"/>
+    <Balance saldo="17.350,90" gastos="-1.838,00"/>
 
     <Actions/>
 
@@ -78,7 +78,7 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    //backgroundColor: '#212121',
+    backgroundColor: '#dadada',
   },
   title:{
     color:'#dadada',

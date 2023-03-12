@@ -19,14 +19,28 @@ export default function Moviments( {data} ) {
                     <MotiText
                         style={data.type === 1 ? styles.value : styles.expenses}
                         from={{
-                            transform: [{"translateX":100}],
-                        }}                    
-                        animate={{
-                            transform: [{"translateX":0}],
-                        }}
+                            transform: [
+                              {
+                                scale: [1],
+                              },
+                              {
+                                translateX: [100],
+                              },
+                            ],
+                          }}
+                          animate={{
+                            transform: [
+                              {
+                                scale: [1],
+                              },
+                              {
+                                translateX: [0],
+                              },
+                            ],
+                          }}
                         transition={{
-                            type:'springr',
-                            duration:500,
+                            type:"spring",
+                            duration:700,
                         }}
                         >      
                         {data.type === 1 ? `R$ ${data.value}` : `R$ -${data.value}`} 
