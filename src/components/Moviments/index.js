@@ -19,10 +19,10 @@ export default function Moviments( {data} ) {
                     <MotiText
                         style={data.type === 1 ? styles.value : styles.expenses}
                         from={{
-                            translateX:100,
+                            transform: [{"translateX":100}],
                         }}                    
                         animate={{
-                            translateX:0,
+                            transform: [{"translateX":0}],
                         }}
                         transition={{
                             type:'springr',
@@ -39,7 +39,7 @@ export default function Moviments( {data} ) {
             animate={{opacity: 1}}
             transition={{type:'timing'}}
         
-            styles= {styles.skeleton}></MotiView> 
+            styles= {styles.skeleton}></MotiView> git add .
         </AnimatePresence>  
         )}
 
